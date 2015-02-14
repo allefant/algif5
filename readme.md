@@ -71,7 +71,7 @@ struct ALGIF_FRAME {
     int transparent_index;
 };
 struct ALGIF_BITMAP {
-    int w, h, d;
+    int w, h;
     uint8_t *data;
 };
 struct ALGIF_PALETTE {

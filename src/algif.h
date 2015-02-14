@@ -23,7 +23,7 @@ struct ALGIF_PALETTE {
 };
 
 struct ALGIF_BITMAP {
-    int w, h, d;
+    int w, h;
     uint8_t *data;
 };
 
