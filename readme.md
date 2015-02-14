@@ -43,9 +43,7 @@
 </script>
 </head>
 <body style="width:700px">
-
-# algif5
-
+<h1>algif5</h1>
 <div style="float:right">
 <pre>
 struct ALGIF_ANIMATION {
@@ -85,53 +83,37 @@ struct ALGIF_RGB {
 };
 </pre>
 </div>
-
-## About
-
-**algif5** is a gif loading library for Allegro 5.
-
-## Download
-
-[algif5.zip](algif5.zip)
-
-## Documentation
-
+<h2>About</h2>
+<b>algif5</b> is a gif loading library for Allegro 5.
+<h2>Download</h2>
+<a href="algif5.zip">algif5.zip</a>
+<h2>Documentation</h2>
 There is basically only three functions:
 <pre>ALGIF_ANIMATION *gif = algif_load_animation(char const *filename);
 ALGIF_ANIMATION *gif = algif_load_animation_f(ALLEGRO_FILE *file);
 </pre>
-
-Load a gif.
-
+<p>Load a gif.</p>
 <pre>al_draw_bitmap(algif_get_bitmap(gif, al_get_time()), x, y, 0);</pre>
-
-Draw the current frame.
-
+<p>Draw the current frame.</p>
 <pre>algif_destroy_animation(gif);</pre>
-
-Destroy the gif again.
-
-Like the version without _f but load from an ALLEGRO_FILE instead.
-
-## Installation
-
+<p>Destroy the gif again.</p>
+<p>Like the version without _f but load from an ALLEGRO_FILE instead.</p>
+<h2>Installation</h2>
 Unfortunately I'm bad with build systems and makefiles and so on, so instead
 just do this:
-
-*   Place algif.h somewhere where your compiler will find it.
-*   When compiling your code, make sure algif.c, bitmap.c, gif.c and lzw.c
-    are compiled along.
+<ul>
+    <li>Place algif.h somewhere where your compiler will find it.</li>
+    <li>When compiling your code, make sure algif.c, bitmap.c, gif.c and lzw.c
+    are compiled along.</li>
+</ul>
 I also included a makefile in the .zip to create the example program but it
 probably only works in Linux. Allegro 5 (including the primitives addon) is
 required.
-
-## Examples
-
-The download comes with an example program.
-
-![](examples/skeleton_up.gif)
-![](examples/skeleton_down.gif)
-![](examples/skeleton_left.gif)
-![](examples/skeleton_right.gif)
+<h2>Examples</h2>
+<p>The download comes with an example program.</p>
+<img id="up" src="examples/skeleton_up.gif" />
+<img id="down" src="examples/skeleton_down.gif" />
+<img id="left" src="examples/skeleton_left.gif" />
+<img id="right" src="examples/skeleton_right.gif" />
 </body>
 </html>
