@@ -89,15 +89,18 @@ struct ALGIF_RGB {
 <a href="http://allegro5.org/algif5/algif5.zip">algif5.zip</a>
 <h2>Documentation</h2>
 There is basically only three functions:
+<h3>algif_load_animation</h3>
 <pre>ALGIF_ANIMATION *gif = algif_load_animation(char const *filename);
 ALGIF_ANIMATION *gif = algif_load_animation_f(ALLEGRO_FILE *file);
 </pre>
-<p>Load a gif.</p>
+<p>Load a gif. Either by specifying the filename or by passing an
+ALLEGRO_FILE opened for reading.</p>
+<h3>algif_get_bitmap</h3>
 <pre>al_draw_bitmap(algif_get_bitmap(gif, al_get_time()), x, y, 0);</pre>
-<p>Draw the current frame.</p>
+<p>Get a bitmap for the current frame.</p>
+<h3>algif_destroy_animation</h3>
 <pre>algif_destroy_animation(gif);</pre>
 <p>Destroy the gif again.</p>
-<p>Like the version without _f but load from an ALLEGRO_FILE instead.</p>
 <h2>Installation</h2>
 Unfortunately I'm bad with build systems and makefiles and so on, so instead
 just do this:
