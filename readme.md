@@ -44,6 +44,12 @@
 </head>
 <body style="width:700px">
 <h1>algif5</h1>
+<h2>About</h2>
+</p><b>algif5</b> is a gif loading library for Allegro 5.
+<a href="http://allegro5.org/algif5">Homepage</a>, <a
+href="http://github.com/allefant/algif5">Github</a>.
+<h2>Download</h2>
+<a href="http://allegro5.org/algif5/algif5.zip">algif5.zip</a>
 <div style="float:right">
 <pre>
 struct ALGIF_ANIMATION {
@@ -83,10 +89,6 @@ struct ALGIF_RGB {
 };
 </pre>
 </div>
-<h2>About</h2>
-<b>algif5</b> is a gif loading library for Allegro 5.
-<h2>Download</h2>
-<a href="http://allegro5.org/algif5/algif5.zip">algif5.zip</a>
 <h2>Documentation</h2>
 There is basically only three functions:
 <h3>algif_load_animation</h3>
