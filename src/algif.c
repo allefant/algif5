@@ -99,3 +99,11 @@ ALLEGRO_BITMAP *algif_get_bitmap(ALGIF_ANIMATION *gif, double seconds) {
     }
     return gif->frames[0].rendered;
 }
+
+ALLEGRO_BITMAP *algif_get_frame_bitmap(ALGIF_ANIMATION *gif, int i) {
+    return gif->frames[i].rendered;
+}
+
+double algif_get_frame_duration(ALGIF_ANIMATION *gif, int i) {
+    return gif->frames[i].duration / 100.0;
+}

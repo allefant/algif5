@@ -61,6 +61,8 @@ void algif_destroy_bitmap(ALGIF_BITMAP *bitmap);
 void algif_blit(ALGIF_BITMAP *from, ALGIF_BITMAP *to, int xf, int yf, int xt, int yt,
         int w, int h);
 ALLEGRO_BITMAP *algif_get_bitmap(ALGIF_ANIMATION *gif, double seconds);
+ALLEGRO_BITMAP *algif_get_frame_bitmap(ALGIF_ANIMATION *gif, int i);
+double algif_get_frame_duration(ALGIF_ANIMATION *gif, int i);
 
 #ifdef __cplusplus
 }
