@@ -72,7 +72,10 @@ ALGIF_ANIMATION *algif_load_animation_f(ALLEGRO_FILE *file) {
     int i;
     for (i = 0; i < n; i++) {
         ALGIF_FRAME *f = &gif->frames[i];
-        f->rendered = al_create_bitmap(gif->width, gif->height);
+        if (i == 0)
+            f->rendered = al_create_bitmap(gif->width, gif->height);
+        else
+            f->rendered = al_clone_bitmap(gif->frames[i - 1].rendered);
         al_set_target_bitmap(f->rendered);
         algif_render_frame(gif, i, 0, 0);
         gif->duration += f->duration;

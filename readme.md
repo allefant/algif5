@@ -42,7 +42,7 @@
     setInterval(changepic, 20);
 </script>
 </head>
-<body style="width:700px">
+<body>
 <h1>algif5</h1>
 <h2>About</h2>
 </p><b>algif5</b> is a gif loading library for Allegro 5.
