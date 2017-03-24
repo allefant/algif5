@@ -1,46 +1,5 @@
 <html>
 <head>
-<script type="text/javascript">
-    var x = 0;
-    var y = 0;
-    var phase = "right";
-    function changepic() {
-        var dirs = ["up", "down", "right", "left"];
-        for (var i = 0; i < 4; i++) {
-            var img = document.getElementById(dirs[i]);
-            img.style.position = "absolute";
-            img.style.display = phase == dirs[i] ? "inline" : "none";
-            img.style.left = x;
-            img.style.top = y;
-        }
-
-        if (phase == "right") {
-            x += 1;
-            if (x == 640) {
-                phase = "down";
-            }
-        }
-        if (phase == "down") {
-            y += 1;
-            if (y == 480) {
-                phase = "left";
-            }
-        }
-        if (phase == "left") {
-            x -= 1;
-            if (x == 0) {
-                phase = "up";
-            }
-        }
-        if (phase == "up") {
-            y -= 1;
-            if (y == 0) {
-                phase = "right";
-            }
-        }
-    }
-    setInterval(changepic, 20);
-</script>
 </head>
 <body>
 <h1>algif5</h1>
