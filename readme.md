@@ -92,5 +92,7 @@ required.
 <img id="down" src="examples/skeleton_down.gif" />
 <img id="left" src="examples/skeleton_left.gif" />
 <img id="right" src="examples/skeleton_right.gif" />
+<h2>License</h2>
+The license is the same as Allegro 5 which is <b>zlib</b>.
 </body>
 </html>
