@@ -59,7 +59,7 @@ static void deinterlace (ALGIF_BITMAP *bmp)
     algif_destroy_bitmap (n);
 }
 
-ALGIF_ANIMATION *algif_load_raw(ALLEGRO_FILE *file) {
+ALGIF_ANIMATION *algif_load_raw(ALLEGRO_FILE *file, const bool freefp) {
     if (!file)
         return NULL;
 
@@ -217,13 +217,14 @@ ALGIF_ANIMATION *algif_load_raw(ALLEGRO_FILE *file) {
                 break;
             case 0x3b:
                 /* GIF Trailer. */
-                al_fclose (file);
+                if (freefp)
+                    al_fclose (file);
                 return gif;
         }
     }
     while (true);
   error:
-    if (file)
+    if (file && freefp)
         al_fclose (file);
     if (gif)
         algif_destroy_animation (gif);
