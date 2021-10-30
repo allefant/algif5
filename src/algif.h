@@ -50,7 +50,7 @@ struct ALGIF_FRAME {
     ALLEGRO_BITMAP *rendered;
 };
 
-ALGIF_ANIMATION *algif_load_raw(ALLEGRO_FILE *file);
+ALGIF_ANIMATION *algif_load_raw(ALLEGRO_FILE *file, const bool freefp);
 ALGIF_ANIMATION *algif_load_animation_f(ALLEGRO_FILE *file);
 ALGIF_ANIMATION *algif_load_animation(char const *filename);
 void algif_render_frame(ALGIF_ANIMATION *gif, int frame, int xpos, int ypos);

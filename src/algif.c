@@ -57,7 +57,7 @@ void algif_render_frame(ALGIF_ANIMATION *gif, int frame, int xpos, int ypos) {
 }
 
 ALGIF_ANIMATION *algif_load_animation_f(ALLEGRO_FILE *file) {
-    ALGIF_ANIMATION *gif = algif_load_raw(file);
+    ALGIF_ANIMATION *gif = algif_load_raw(file, false);
 
     if (!gif)
         return gif;
